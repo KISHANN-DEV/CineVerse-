@@ -1,0 +1,78 @@
+/* CineVerse Clean - Cyberpunk Movies Catalogue Stylesheet */
+
+.movies-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.movies-header {
+  margin-bottom: 12px;
+}
+
+/* Horizontal scrollable genre list */
+.genre-scroll-wrapper {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 4px 16px 4px;
+  width: 100%;
+}
+
+.genre-scroll-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.genre-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.genre-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+.genre-filter-btn {
+  white-space: nowrap;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-color: rgba(168, 85, 247, 0.15);
+  cursor: pointer;
+  transition: all var(--trans-fast);
+}
+
+.genre-filter-btn:hover {
+  border-color: var(--color-accent);
+  color: var(--text-primary);
+  background: rgba(34, 211, 238, 0.05);
+}
+
+.genre-filter-btn.active {
+  background: var(--color-accent);
+  color: var(--bg-primary);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px var(--color-accent);
+  font-weight: 700;
+  text-shadow: none;
+}
+
+/* Empty catalogue box */
+.movies-empty-catalog {
+  padding: 60px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.movies-empty-catalog h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.movies-empty-catalog p {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+}

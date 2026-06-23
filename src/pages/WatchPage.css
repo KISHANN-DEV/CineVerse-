@@ -1,0 +1,224 @@
+/* CineVerse Clean - Cyberpunk Watch Page Stylesheet */
+
+.watch-page {
+  position: relative;
+}
+
+.watch-page-ambience-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  z-index: -2;
+  opacity: 0.25;
+  filter: blur(40px);
+}
+
+.watch-back-row {
+  margin-bottom: 24px;
+}
+
+.watch-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--trans-fast);
+}
+
+.watch-back-link:hover {
+  color: var(--color-accent);
+}
+
+/* Cinematic Theatre Player Frame */
+.theatre-screen-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 24px;
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.15), var(--glass-shadow);
+  overflow: hidden;
+  margin-bottom: 40px;
+  background: #000;
+}
+
+.theatre-screen-frame:hover {
+  border-color: rgba(168, 85, 247, 0.25);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.15), var(--glass-shadow);
+}
+
+.theatre-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.theatre-screen-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-surface);
+  text-align: center;
+  padding: 30px;
+}
+
+.theatre-screen-fallback h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.theatre-screen-fallback p {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+  max-width: 450px;
+  line-height: 1.5;
+}
+
+/* Info Summary Block */
+.watch-info-block {
+  padding: 36px;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 50px;
+}
+
+.watch-info-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.watch-movie-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.watch-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.watch-badge-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.watch-rating-glow-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+.watch-genres-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.watch-genre-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.watch-movie-synopsis h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.watch-movie-synopsis p {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* Recommended carousel */
+.watch-suggested-section {
+  margin-bottom: 30px;
+}
+
+.watch-suggested-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Loading templates */
+.watch-page-loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.skeleton-player {
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 24px;
+}
+
+.skeleton-watch-title {
+  height: 40px;
+  width: 60%;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .watch-info-block {
+    padding: 24px;
+  }
+  .watch-movie-title {
+    font-size: 1.6rem;
+  }
+  .watch-info-title-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

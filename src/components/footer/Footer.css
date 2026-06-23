@@ -1,0 +1,159 @@
+/* CineVerse Clean - Cyberpunk Glass Footer Stylesheet */
+
+.footer {
+  margin-top: 60px;
+  padding: 40px 48px 24px 48px;
+  border-radius: 20px;
+  border-color: rgba(168, 85, 247, 0.08);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand-section {
+  flex: 2 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-brand-section h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.footer-tagline {
+  font-family: var(--font-sub);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.footer-credits {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.heart-icon {
+  color: var(--color-secondary);
+  animation: heartbeat-pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes heartbeat-pulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
+
+/* Links */
+.footer-links-section {
+  flex: 1.5 1 240px;
+  display: flex;
+  gap: 60px;
+}
+
+.footer-link-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-group h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.footer-link-group a {
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color var(--trans-fast);
+}
+
+.footer-link-group a:hover {
+  color: var(--color-accent);
+}
+
+/* Social links */
+.footer-social-section {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-social-section h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.social-links-row {
+  display: flex;
+  gap: 14px;
+}
+
+.social-links-row a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  transition: all var(--trans-fast);
+}
+
+.social-links-row a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+
+/* Bottom attribution */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.copyright-text {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 30px 24px 20px 24px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer-links-section {
+    gap: 40px;
+  }
+}

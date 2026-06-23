@@ -1,0 +1,129 @@
+/* CineVerse Clean - Cyberpunk Trailer Modal Stylesheet */
+
+.trailer-modal-overlay-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.trailer-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.trailer-modal-box {
+  position: relative;
+  width: 90%;
+  max-width: 860px;
+  border-radius: 20px;
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 0 50px rgba(34, 211, 238, 0.2), var(--glass-shadow);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.trailer-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1rem;
+  z-index: 10;
+  transition: all var(--trans-fast);
+  cursor: pointer;
+}
+
+.trailer-modal-close:hover {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 10px var(--color-secondary);
+  transform: scale(1.08);
+}
+
+.trailer-aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.trailer-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.trailer-modal-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+}
+
+.fallback-film-icon {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  margin-bottom: 20px;
+  animation: pulse-glow-film 2s infinite ease-in-out;
+}
+
+@keyframes pulse-glow-film {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(236, 72, 153, 0.2));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.5));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(236, 72, 153, 0.2));
+  }
+}
+
+.trailer-modal-fallback h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.trailer-modal-fallback p {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  max-width: 400px;
+  line-height: 1.5;
+}

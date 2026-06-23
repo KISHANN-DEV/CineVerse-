@@ -1,0 +1,51 @@
+/* CineVerse Clean - Cyberpunk Home Page Stylesheet */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-movie-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-title-icon {
+  font-size: 1.25rem;
+}
+
+.neon-pink-color {
+  color: var(--color-secondary);
+  filter: drop-shadow(0 0 5px rgba(236, 72, 153, 0.4));
+}
+
+.neon-cyan-color {
+  color: var(--color-accent);
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.4));
+}
+
+.neon-purple-color {
+  color: var(--color-primary);
+  filter: drop-shadow(0 0 5px rgba(168, 85, 247, 0.4));
+}
+
+.section-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

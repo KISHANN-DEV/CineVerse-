@@ -1,0 +1,326 @@
+/* CineVerse Clean - Cyberpunk Glassmorphism Global Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --bg-primary: #050816;
+  --bg-surface: #0f172a;
+  --bg-surface-glow: #1e293b;
+  
+  --color-primary: #a855f7;      /* Neon Purple */
+  --color-primary-rgb: 168, 85, 247;
+  --color-secondary: #ec4899;    /* Neon Pink */
+  --color-secondary-rgb: 236, 72, 153;
+  --color-accent: #22d3ee;       /* Neon Cyan */
+  --color-accent-rgb: 34, 211, 238;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Typography */
+  --font-main: 'Outfit', sans-serif;
+  --font-sub: 'Inter', sans-serif;
+
+  /* Glassmorphism Configuration */
+  --glass-bg: rgba(15, 23, 42, 0.45);
+  --glass-bg-hover: rgba(15, 23, 42, 0.6);
+  --glass-border: rgba(168, 85, 247, 0.12);
+  --glass-border-hover: rgba(236, 72, 153, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.55);
+  --glass-blur: blur(16px);
+  --glass-blur-heavy: blur(24px);
+
+  /* Transitions */
+  --trans-fast: 0.2s ease;
+  --trans-normal: 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --trans-slow: 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --trans-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Reset and Core Configuration */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.03) 0%, transparent 50%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+}
+
+/* Custom Cyberpunk Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.2);
+  border-radius: 20px;
+  border: 2px solid var(--bg-primary);
+  transition: background var(--trans-fast);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* Swiper overrides for Cyberpunk style */
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-accent) !important;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+  transition: transform var(--trans-fast);
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+/* Glassmorphism Utility Classes */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: border-color var(--trans-normal), box-shadow var(--trans-normal), background-color var(--trans-normal);
+}
+
+.glass-panel-hover:hover {
+  border-color: var(--glass-border-hover);
+  background: var(--glass-bg-hover);
+  box-shadow: 0 8px 32px 0 rgba(236, 72, 153, 0.12), var(--glass-shadow);
+}
+
+.glass-input {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 30px;
+  color: var(--text-primary);
+  padding: 12px 24px;
+  outline: none;
+  font-family: var(--font-sub);
+  transition: all var(--trans-normal);
+}
+
+.glass-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.35);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* Cyberpunk Neon Buttons */
+.btn-neon {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform var(--trans-fast), box-shadow var(--trans-fast);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+
+.btn-neon::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s;
+  opacity: 0;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(236, 72, 153, 0.65), 0 0 5px rgba(34, 211, 238, 0.4);
+}
+
+.btn-neon:hover::after {
+  left: 125%;
+  opacity: 1;
+}
+
+.btn-neon:active {
+  transform: translateY(0);
+}
+
+.btn-glass {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: all var(--trans-fast);
+}
+
+.btn-glass:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.25);
+  transform: translateY(-2px);
+}
+
+.btn-glass:active {
+  transform: translateY(0);
+}
+
+/* Layout Architecture */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 260px; /* Width of the sidebar */
+  min-height: 100vh;
+  transition: margin-left var(--trans-normal);
+  position: relative;
+  z-index: 1;
+}
+
+.page-container {
+  flex: 1;
+  padding: 110px 48px 48px 48px; /* Top padding leaves space for floating navbar */
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .app-main {
+    margin-left: 80px; /* Collapsed sidebar width */
+  }
+  .page-container {
+    padding: 100px 24px 100px 24px; /* Space for bottom nav on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .app-main {
+    margin-left: 0;
+  }
+  .page-container {
+    padding: 90px 16px 90px 16px;
+  }
+}
+
+/* Movie grids */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Cyberpunk Glow Text Effect */
+.glow-text-primary {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.6), 0 0 20px rgba(168, 85, 247, 0.2);
+}
+.glow-text-secondary {
+  text-shadow: 0 0 10px rgba(236, 72, 153, 0.6), 0 0 20px rgba(236, 72, 153, 0.2);
+}
+.glow-text-accent {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6), 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+/* Loading Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #0f172a 25%, #1e293b 50%, #0f172a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}

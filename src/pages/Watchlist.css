@@ -1,0 +1,49 @@
+/* CineVerse Clean - Cyberpunk Watchlist Stylesheet */
+
+.watchlist-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.watchlist-header {
+  margin-bottom: 12px;
+}
+
+/* Empty watchlist state card */
+.watchlist-empty-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.08);
+  max-width: 500px;
+  margin: 40px auto 0 auto;
+}
+
+.empty-heart-icon {
+  font-size: 3.5rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.watchlist-empty-state h3 {
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.watchlist-empty-state p {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.empty-action-btn {
+  font-size: 0.9rem;
+}

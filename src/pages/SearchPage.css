@@ -1,0 +1,173 @@
+/* CineVerse Clean - Cyberpunk Search Results Stylesheet */
+
+.search-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.search-page-header {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.search-page-form {
+  position: relative;
+  flex: 1;
+}
+
+.search-page-input {
+  width: 100%;
+  padding: 14px 60px 14px 28px;
+  font-size: 1.05rem;
+  border-radius: 30px;
+}
+
+.search-page-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  transition: color var(--trans-fast);
+}
+
+.search-page-btn:hover {
+  color: var(--color-accent);
+}
+
+.filter-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  border-radius: 30px;
+}
+
+.filter-toggle-btn.active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* Advanced filters Panel */
+.advanced-filters-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 24px 30px;
+  border-radius: 16px;
+  align-items: flex-end;
+  border-color: rgba(168, 85, 247, 0.1);
+  overflow: hidden;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-input {
+  max-width: 120px;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+/* Range input slider */
+.filter-slider {
+  -webkit-appearance: none;
+  width: 180px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg-surface-glow);
+  outline: none;
+  margin: 15px 0;
+}
+
+.filter-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--color-accent);
+  transition: transform var(--trans-fast);
+}
+
+.filter-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.reset-filters-btn {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+}
+
+/* Metadata */
+.search-results-info {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.highlight-query {
+  font-weight: 700;
+  color: var(--color-accent);
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.3);
+}
+
+/* Empty states */
+.search-empty-state {
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.search-empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.search-empty-state p {
+  font-family: var(--font-sub);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .search-page-header {
+    flex-direction: column;
+  }
+  .filter-toggle-btn {
+    width: 100%;
+    justify-content: center;
+    height: 48px;
+  }
+  .advanced-filters-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-input {
+    max-width: 100%;
+  }
+  .filter-slider {
+    width: 100%;
+  }
+}

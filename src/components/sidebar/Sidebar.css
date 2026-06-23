@@ -1,0 +1,339 @@
+/* CineVerse Clean - Cyberpunk Glass Sidebar Stylesheet */
+
+.sidebar {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  bottom: 16px;
+  width: 240px;
+  z-index: 100;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  transition: width var(--trans-normal), transform var(--trans-normal), border-color var(--trans-normal);
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+/* Header & Logo styling */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: text-shadow var(--trans-normal);
+}
+
+.logo-symbol {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.25);
+  transition: all var(--trans-normal);
+}
+
+.logo-text {
+  transition: all var(--trans-normal);
+  color: var(--text-primary);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.sidebar.collapsed .logo-text {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-neon {
+  color: var(--color-secondary);
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.6);
+  transition: all var(--trans-normal);
+}
+
+/* Hover effects to make it extremely attractive */
+.sidebar-logo:hover .logo-symbol {
+  transform: scale(1.1) rotate(6deg);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 20px var(--color-primary), 0 0 35px rgba(236, 72, 153, 0.3), inset 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.sidebar-logo:hover .logo-text {
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6); /* Cyan glow for Cine */
+}
+
+.sidebar-logo:hover .logo-neon {
+  text-shadow: 0 0 15px var(--color-secondary), 0 0 30px var(--color-secondary); /* Intense pink glow for Verse */
+}
+
+/* Desktop Collapse Button */
+.collapse-btn-desktop {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: all var(--trans-fast);
+}
+
+.collapse-btn-desktop:hover {
+  background: var(--color-primary);
+  color: var(--text-primary);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 8px var(--color-primary);
+}
+
+.sidebar.collapsed .collapse-btn-desktop {
+  position: absolute;
+  right: 12px;
+}
+
+/* Navigation Links */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color var(--trans-fast);
+  white-space: nowrap;
+}
+
+.link-icon {
+  font-size: 1.15rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+}
+
+.link-label {
+  z-index: 2;
+  transition: opacity var(--trans-normal);
+  font-family: var(--font-sub);
+}
+
+.sidebar.collapsed .link-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar-link:hover {
+  color: var(--text-primary);
+}
+
+.sidebar-link.active {
+  color: var(--text-primary);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+/* Sliding pill indicator styling */
+.sidebar-active-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 12px;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.1);
+}
+
+/* Sidebar Footer premium indicator */
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.footer-premium-card {
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(236, 72, 153, 0.05);
+  border-color: rgba(236, 72, 153, 0.2);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.1);
+}
+
+.premium-glow {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(236, 72, 153, 0.6);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.footer-premium-card p {
+  font-family: var(--font-sub);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.footer-premium-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  margin: 0 auto;
+  box-shadow: 0 0 10px var(--color-secondary);
+  animation: pulse-glow 2s infinite ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px var(--color-secondary);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--color-secondary);
+  }
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px var(--color-secondary);
+  }
+}
+
+/* Mobile header styling */
+.mobile-header {
+  display: none;
+}
+
+.mobile-sidebar-backdrop {
+  display: none;
+}
+
+/* Responsiveness media queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px;
+  }
+  .sidebar .logo-text,
+  .sidebar .link-label,
+  .sidebar .footer-premium-card {
+    display: none;
+  }
+  .sidebar .footer-premium-dot {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-110%);
+    width: 240px !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar .logo-text,
+  .sidebar .link-label {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .collapse-btn-desktop {
+    display: none;
+  }
+
+  /* Show mobile top header bar */
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    height: 60px;
+    padding: 0 20px;
+    border-radius: 12px;
+    z-index: 99;
+  }
+
+  .mobile-brand {
+    font-weight: 800;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    transition: text-shadow var(--trans-normal);
+  }
+  .mobile-brand:hover {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.6);
+  }
+  .mobile-brand:hover .logo-neon {
+    text-shadow: 0 0 15px var(--color-secondary), 0 0 30px var(--color-secondary);
+  }
+
+  .mobile-toggle-btn {
+    font-size: 1.3rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-sidebar-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 8, 22, 0.4);
+    backdrop-filter: blur(4px);
+    z-index: 98;
+  }
+}

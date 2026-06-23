@@ -1,0 +1,68 @@
+/* CineVerse Clean - Cyberpunk Trending Page Stylesheet */
+
+.page-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-icon {
+  font-size: 2rem;
+}
+
+.page-header-row h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* Time tabs */
+.time-toggle-tabs {
+  display: flex;
+  padding: 4px;
+  border-radius: 30px;
+  border-color: rgba(168, 85, 247, 0.15);
+}
+
+.tab-toggle-btn {
+  padding: 8px 24px;
+  border-radius: 20px;
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all var(--trans-fast);
+}
+
+.tab-toggle-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-toggle-btn.active {
+  background: var(--color-primary);
+  color: var(--text-primary);
+  box-shadow: 0 0 10px var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .page-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .time-toggle-tabs {
+    width: 100%;
+  }
+  .tab-toggle-btn {
+    flex: 1;
+  }
+}

@@ -1,0 +1,151 @@
+/* CineVerse Clean - Cyberpunk Hero Spotlight Stylesheet */
+
+.hero-banner-section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hero-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center 20%;
+  z-index: 1;
+}
+
+.hero-loading-slot {
+  width: 100%;
+  height: 520px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-content-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  z-index: 2;
+}
+
+.hero-glass-details {
+  max-width: 580px;
+  padding: 40px;
+  border-radius: 20px;
+  border-color: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), var(--glass-shadow);
+}
+
+.hero-glass-details:hover {
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.15), var(--glass-shadow);
+}
+
+.hero-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hero-rating-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.4);
+}
+
+.hero-year-pill {
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.hero-badge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 5px var(--color-secondary);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.hero-movie-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.hero-movie-desc {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-actions-row {
+  display: flex;
+  gap: 16px;
+}
+
+.hero-btn {
+  font-size: 0.9rem;
+}
+
+/* Responsiveness media queries */
+@media (max-width: 768px) {
+  .hero-banner-section {
+    height: 480px;
+  }
+  .hero-content-outer {
+    padding: 24px;
+    align-items: flex-end;
+  }
+  .hero-glass-details {
+    max-width: 100%;
+    padding: 24px;
+    margin-bottom: 10px;
+  }
+  .hero-movie-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner-section {
+    height: 440px;
+  }
+  .hero-actions-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

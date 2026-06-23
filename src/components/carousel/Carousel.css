@@ -1,0 +1,62 @@
+/* CineVerse Clean - Cyberpunk Swiper Carousel Stylesheet */
+
+.swiper-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+.movies-swiper-container {
+  padding: 12px 6px 36px 6px !important;
+  overflow: visible !important;
+}
+
+.swiper-slide-custom {
+  height: auto;
+}
+
+.carousel-empty-message {
+  padding: 40px;
+  text-align: center;
+  background: var(--glass-bg);
+  border: 1px dashed var(--glass-border);
+  border-radius: 12px;
+  color: var(--text-muted);
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+}
+
+/* Custom Swiper Arrow placement & style adjustments */
+.swiper-carousel-wrapper .swiper-button-next,
+.swiper-carousel-wrapper .swiper-button-prev {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all var(--trans-fast);
+}
+
+.swiper-carousel-wrapper .swiper-button-next:hover,
+.swiper-carousel-wrapper .swiper-button-prev:hover {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+}
+
+.swiper-carousel-wrapper .swiper-button-next::after,
+.swiper-carousel-wrapper .swiper-button-prev::after {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+/* Hide navigation arrows on small mobile devices to maximize layout space */
+@media (max-width: 640px) {
+  .swiper-carousel-wrapper .swiper-button-next,
+  .swiper-carousel-wrapper .swiper-button-prev {
+    display: none !important;
+  }
+}

@@ -1,0 +1,352 @@
+/* CineVerse Clean - Cyberpunk Movie Details Page Stylesheet */
+
+.movie-details-page {
+  position: relative;
+}
+
+.details-blur-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center 15%;
+  z-index: -2;
+  opacity: 0.65;
+  filter: blur(10px);
+}
+
+.details-back-nav {
+  margin-bottom: 24px;
+}
+
+.back-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-family: var(--font-sub);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--trans-fast);
+}
+
+.back-link-btn:hover {
+  color: var(--color-accent);
+}
+
+/* Details Grid */
+.details-content-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  margin-bottom: 50px;
+}
+
+.details-poster-box {
+  width: 100%;
+}
+
+.details-poster-img {
+  width: 100%;
+  border-radius: 20px;
+  border-color: rgba(168, 85, 247, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.details-poster-placeholder {
+  width: 100%;
+  aspect-ratio: 2/3;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  text-align: center;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 20px;
+}
+
+.details-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.rating-glow-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+.details-movie-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.details-movie-tagline {
+  font-family: var(--font-sub);
+  font-style: italic;
+  color: var(--color-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.details-genres-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.genre-badge-chip {
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--font-sub);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.details-overview-box {
+  margin-bottom: 36px;
+}
+
+.details-overview-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.details-overview-box p {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* Actions Row */
+.details-actions-row-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.action-button-details {
+  font-size: 0.95rem;
+}
+
+.glow-cyan-hover:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.fav-toggle-btn.active {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background: rgba(236, 72, 153, 0.08);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+}
+
+.watchlist-icon-heart {
+  transition: transform var(--trans-fast);
+}
+
+.fav-toggle-btn:hover .watchlist-icon-heart {
+  transform: scale(1.15);
+}
+
+.watchlist-icon-heart.filled {
+  fill: var(--color-secondary);
+}
+
+/* Cast horizontal list */
+.details-section-row {
+  margin-bottom: 50px;
+}
+
+.details-row-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cast-scroll-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 4px 16px 4px;
+  width: 100%;
+}
+
+.cast-scroll-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.cast-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.15);
+}
+
+.cast-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.4);
+}
+
+.cast-member-card {
+  flex: 0 0 140px;
+  width: 140px;
+  border-radius: 12px;
+  border-color: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cast-photo-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: var(--bg-surface-glow);
+}
+
+.cast-names-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cast-actor-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cast-character-name {
+  font-family: var(--font-sub);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Loading templates */
+.movie-details-loading-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skeleton-backdrop {
+  width: 100%;
+  height: 380px;
+  border-radius: 20px;
+  margin-bottom: -150px;
+}
+
+.skeleton-details-row {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.skeleton-details-poster {
+  aspect-ratio: 2/3;
+  border-radius: 20px;
+}
+
+.skeleton-details-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+}
+
+.skeleton-bar-title {
+  height: 48px;
+  width: 70%;
+  border-radius: 6px;
+}
+
+.skeleton-bar-meta {
+  height: 20px;
+  width: 40%;
+  border-radius: 4px;
+}
+
+.skeleton-bar-desc {
+  height: 14px;
+  width: 95%;
+  border-radius: 4px;
+}
+
+@media (max-width: 960px) {
+  .details-content-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .details-poster-box {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .details-movie-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .details-movie-tagline {
+    text-align: center;
+  }
+  .details-stats-row, .details-genres-row, .details-actions-row-page {
+    justify-content: center;
+  }
+  .details-overview-box {
+    text-align: center;
+  }
+  .skeleton-details-row {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .skeleton-details-content {
+    width: 100%;
+    align-items: center;
+  }
+}

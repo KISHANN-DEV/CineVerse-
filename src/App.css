@@ -1,0 +1,28 @@
+/* CineVerse Clean - Layout Shell Stylesheet */
+
+.main-content-scroll {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-wrapper {
+  padding: 0 48px 48px 48px;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .footer-wrapper {
+    padding: 0 24px 48px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    padding: 0 16px 48px 16px;
+  }
+}

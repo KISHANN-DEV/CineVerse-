@@ -1,0 +1,158 @@
+/* CineVerse Clean - Cyberpunk About Page Stylesheet */
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-header {
+  margin-bottom: 8px;
+}
+
+.about-hero-card {
+  padding: 40px;
+  border-radius: 20px;
+  border-color: rgba(168, 85, 247, 0.15);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15), var(--glass-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-hero-card h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.about-summary {
+  font-family: var(--font-sub);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-summary strong {
+  color: var(--text-primary);
+}
+
+.tech-stack-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Tech specs grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.tech-card {
+  padding: 30px;
+  border-radius: 16px;
+  border-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tech-card:hover {
+  border-color: rgba(34, 211, 238, 0.25);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.15), var(--glass-shadow);
+}
+
+.tech-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  transition: all var(--trans-fast);
+}
+
+.tech-card:hover .tech-icon-circle {
+  background: var(--color-accent);
+  color: var(--bg-primary);
+  box-shadow: 0 0 12px var(--color-accent);
+}
+
+.tech-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.tech-card p {
+  font-family: var(--font-sub);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Q&A section */
+.qa-section {
+  padding: 36px;
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.qa-section h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.qa-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.qa-list li {
+  font-family: var(--font-sub);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 20px;
+}
+
+.qa-list li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-secondary);
+  font-weight: 800;
+  text-shadow: 0 0 5px var(--color-secondary);
+}
+
+.qa-list li strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .about-hero-card {
+    padding: 24px;
+  }
+  .qa-section {
+    padding: 24px;
+  }
+}

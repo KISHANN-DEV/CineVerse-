@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Glowing background block -->
+  <rect x="2" y="2" width="44" height="44" rx="12" fill="#0f172a" stroke="url(#paint0_linear)" stroke-width="2"/>
+  
+  <!-- Glowing gradient play button -->
+  <path d="M19 15L33 24L19 33V15Z" fill="url(#paint1_linear)" filter="url(#glow)"/>
+  
+  <defs>
+    <!-- Border Gradient -->
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a855f7" />
+      <stop offset="1" stop-color="#22d3ee" />
+    </linearGradient>
+    
+    <!-- Play Icon Gradient -->
+    <linearGradient id="paint1_linear" x1="19" y1="15" x2="33" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ec4899" />
+      <stop offset="1" stop-color="#a855f7" />
+    </linearGradient>
+    
+    <!-- Cyberpunk Glow Effect -->
+    <filter id="glow" x="12" y="8" width="28" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+</svg>
