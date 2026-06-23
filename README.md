@@ -6,7 +6,7 @@ The application is completely self-contained and functions entirely offline with
 
 ---
 
-## ✨ Features
+## ✨ Features 
 
 - **🚀 Zero Configuration**: Works instantly out-of-the-box. No TMDB API keys, setups, or login modals required.
 - **🎨 Premium Cyberpunk UI**: Sleek dark theme (`#050816`), neon purple and pink accent glow borders, backdrop blur filters, and dynamic layout scaling.
@@ -19,7 +19,7 @@ The application is completely self-contained and functions entirely offline with
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack 
 
 - **Core**: React JS (v19), Javascript, HTML5, Vanilla CSS
 - **Bundler**: Vite
