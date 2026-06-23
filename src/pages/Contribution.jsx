@@ -38,7 +38,7 @@ const Contribution = () => {
   const contributors = [
     {
       id: 1,
-      name: 'Friend Name 1',
+      name: 'Kishan Singh',
       role: 'Lead Developer',
       desc: 'Architected the core application structure and offline service layer.',
       image: '/src/assets/contributors/friend1.jpg'
