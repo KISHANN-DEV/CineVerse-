@@ -41,21 +41,21 @@ const Contribution = () => {
       name: 'Kishan Singh',
       role: 'Lead Developer',
       desc: 'Architected the core application structure and offline service layer.',
-      image: '/src/assets/contributors/friend1.jpg'
+      image: '/src/assets/Kishan singh.jpg'
     },
     {
       id: 2,
       name: 'Trisha',
       role: 'UI/UX Designer',
       desc: 'Designed the cyberpunk aesthetic, layout styles, and animations.',
-      image: '/src/assets/contributors/friend2.jpg'
+      image: '/src/assets/Trisha.jpg'
     },
     {
       id: 3,
       name: 'Rohit',
       role: 'Local Storage Specialist',
-      desc: 'Optimized local storage persistency and Mock JSON datasets.',
-      image: '/src/assets/contributors/friend3.jpg'
+      desc: 'Optimized local storage persistency.',
+      image: '/src/assets/Rohit.jpg'
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ const Contribution = () => {
       name: 'Ishu Chah',
       role: 'Content Manager',
       desc: 'Curated and formatted local movie descriptions and card assets.',
-      image: '/src/assets/contributors/friend5.jpg'
+      image: '/src/assets/Ishu.jpg'
     }
   ];
 
