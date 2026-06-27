@@ -5,7 +5,8 @@ import './Contribution.css';
 import kishanImage from '../assets/Kishan.jpg';
 import trishaImage from '../assets/Trisha.jpg';
 import rohitImage from '../assets/Rohit.jpg';
-import ishuImage from '../assets/ishu.jpg';
+import chahalImage from '../assets/Chahal.jpg'; 
+import nomemberImage from '../assets/nomember.jpg';
 
 const ContributorCard = ({ contributor, variants }) => {
   const [imgError, setImgError] = useState(false);
@@ -18,7 +19,7 @@ const ContributorCard = ({ contributor, variants }) => {
       <div className="contributor-avatar-container">
         {!imgError ? (
           <img
-            src={contributor.image}
+            src={contributor.image} 
             alt={contributor.name}
             className="contributor-avatar"
             onError={() => setImgError(true)}
@@ -66,14 +67,14 @@ const Contribution = () => {
       name: 'Friend Name 4',
       role: 'QA / Tester',
       desc: 'Conducted rigorous browser tests and movie media validation.',
-      image: '/src/assets/contributors/friend4.jpg'
+      image: nomemberImage
     },
     {
       id: 5,
       name: 'Ishu Chah',
       role: 'Content Manager',
       desc: 'Curated and formatted local movie descriptions and card assets.',
-      image: ishuImage
+      image: chahalImage
     }
   ];
 
