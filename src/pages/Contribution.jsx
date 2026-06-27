@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaUserFriends, FaUser } from 'react-icons/fa';
 import './Contribution.css';
+import kishanImage from '../assets/Kishan.jpg';
+import trishaImage from '../assets/Trisha.jpg';
+import rohitImage from '../assets/Rohit.jpg';
+import ishuImage from '../assets/ishu.jpg';
 
 const ContributorCard = ({ contributor, variants }) => {
   const [imgError, setImgError] = useState(false);
@@ -41,21 +45,21 @@ const Contribution = () => {
       name: 'Kishan Singh',
       role: 'Lead Developer',
       desc: 'Architected the core application structure and offline service layer.',
-      image: '/src/assets/Kishan singh.jpg'
+      image: kishanImage
     },
     {
       id: 2,
       name: 'Trisha',
       role: 'UI/UX Designer',
       desc: 'Designed the cyberpunk aesthetic, layout styles, and animations.',
-      image: '/src/assets/Trisha.jpg'
+      image: trishaImage
     },
     {
       id: 3,
       name: 'Rohit',
       role: 'Local Storage Specialist',
       desc: 'Optimized local storage persistency.',
-      image: '/src/assets/Rohit.jpg'
+      image: rohitImage
     },
     {
       id: 4,
@@ -69,7 +73,7 @@ const Contribution = () => {
       name: 'Ishu Chah',
       role: 'Content Manager',
       desc: 'Curated and formatted local movie descriptions and card assets.',
-      image: '/src/assets/Ishu.jpg'
+      image: ishuImage
     }
   ];
 
